@@ -1,0 +1,11 @@
+name: Teams
+author: Scholtes
+version: 1.0
+description: Team Plugin
+main: me.scholtes.teams.Teams
+depend: [Vault]
+
+commands:
+  f:
+    description: Team Command
+    aliases: [faction, factions]

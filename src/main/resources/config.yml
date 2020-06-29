@@ -1,0 +1,105 @@
+min_characters: 3
+max_characters: 12
+max_faction_size: 10
+messages:
+  help:
+    1:
+      - '&aFaction Commands - 1'
+      - '&a- /f create <name>'
+      - '&a- /f invite <player>'
+      - '&a- /f join <player>'
+      - '&a- /f kick <player>'
+      - '&a- /f disband'
+      - '&a- /f leave'
+    2:
+      - '&aFaction Commands - 2'
+      - '&a- /f promote <player>'
+      - '&a- /f deposit <amount>'
+      - '&a- /f withdraw <amount>'
+      - '&a- /f rename <name>'
+      - '&a- /f balance'
+      - '&a- /f help <page>'
+  reload:
+    no_permission: '&cYou don''t have permission for this!'
+    reloaded: '&aReloaded the config!'
+  create:
+    incorrect: '&c/f create <name>'
+    already_in: '&cYou are already in a faction!'
+    alphanumeric: '&cFaction names must be alphanumeric'
+    too_short: '&cFaction names have to be longer than 3 characters'
+    too_long: '&cFaction names have to be shorter than 12 characters'
+    already_exists: '&cThat faction name already exists!'
+    success: '&aSuccessfully created the faction &2{name}&a!'
+  invite:
+    incorrect: '&c/f invite <player>'
+    not_in: '&cYou are not in a faction!'
+    max_team: '&cYour faction has the max amount of members!'
+    not_leader: '&cYou are not the faction leader!'
+    player_offline: '&c{player} is offline!'
+    already_in: '&c{player} is already in a faction!'
+    already_invited: '&c{player} is already invited to your faction!'
+    success: '&a{player} has been invited to the faction!'
+    invited: '&aYou have been invited to {faction_name}!'
+  join:
+    incorrect: '&c/f join <name>'
+    not_invited: '&cYou haven''t been invited to {faction_name}!'
+    max_team: '&c{faction_name} has the max amount of members!'
+    success: '&aYou have joined {faction_name}!'
+    joined: '&a{player} has joined the faction!'
+  leave:
+    not_in: '&cYou are not in a faction!'
+    leader: '&cYou have to disband the faction or promote someone to leave!'
+    success: '&aYou have left {faction_name}'
+    left: '&a{player} has left the faction!'
+  kick:
+    incorrect: '&c/f kick <player>'
+    not_in: '&cYou are not in a faction!'
+    not_leader: '&cYou need to be the faction leader!'
+    cant_kick_yourself: '&cYou can''t kick yourself'
+    not_member: '&c{player} isn''t in your faction!'
+    success: '&a{player} has been kicked from the faction!'
+    kicked: '&aYou have been kicked from {faction_name}!'
+  disband:
+    not_in: '&cYou are not in a faction!'
+    not_leader: '&cYou need to be the faction leader!'
+    success: '&a{faction_name} has been disbanded!'
+  rename:
+    incorrect: '&c/f rename <name>'
+    not_in: '&cYou are not in a faction!'
+    not_leader: '&cYou need to be the faction leader!'
+    alphanumeric: '&cFaction names must be alphanumeric'
+    too_short: '&cFaction names have to be longer than 3 characters'
+    too_long: '&cFaction names have to be shorter than 12 characters'
+    already_exists: '&cThat faction name already exists!'
+    success: '&a{old_faction_name} has been renamed to {new_faction_name}!'
+  balance:
+    not_in: '&cYou are not in a faction!'
+    success: '&aYour faction balance is: ${balance}'
+  promote:
+    incorrect: '&c/f promote <player>'
+    not_in: '&cYou are not in a faction!'
+    not_leader: '&cYou need to be the faction leader!'
+    not_member: '&c{player} isn''t in your faction!'
+    cant_promote_yourself: '&cYou can''t promote yourself'
+    success: '&a{player} has been promoted to leader!'
+  deposit:
+    incorrect: '&c/f deposit <amount>'
+    not_in: '&cYou are not in a faction!'
+    not_a_number: '&cThat isn''t a number!'
+    not_enough: '&cYou don''t have enough money!'
+    success: '&a{player} has deposited ${money} into the faction!'
+  withdraw:
+    incorrect: '&c/f withdraw <amount>'
+    not_in: '&cYou are not in a faction!'
+    not_leader: '&cYou need to be the faction leader!'
+    not_a_number: '&cThat isn''t a number!'
+    not_enough: '&cThe faction doesn''t have enough money!'
+    success: '&aYou have withdrawn ${money} from the faction!'
+  who:
+    incorrect: '&c/f who <player>'
+    not_in: '&c{player} isn''t in a faction!'
+    message:
+      - '&6Faction Name: &7{faction_name}'
+      - '&cLeader: &7{leader_name}'
+      - '&cMembers: &7{members}'
+      - '&cBalance: &7${balance}'
